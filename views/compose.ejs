@@ -1,0 +1,30 @@
+<%- include("partials/header"); -%>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <center>
+        <h1>Compose</h1><br>
+        <form action="/compose" method="post">
+            <div class="mb-3">
+
+                <label style="font-weight: bold;"  class="form-label">Topic</label>
+                <input maxlength="30" type="text"
+                    style="width: 10cm;border-color: rgb(40, 29, 29); border: width 0.5em;" class="form-control"
+                    name="Topic"><br>
+                <!-- <label style="font-weight: bold;" class="form-label">Your
+                    Thoughts</label>
+                <input style="height: 3cm;width: 10cm; border-color: rgb(40, 29, 29); border: width 0.5em;"
+                    class="form-control" rows="3" name="Des" maxlength="500"> -->
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1" style="font-weight:bold ;">Your Thoughts</label>
+                        <textarea style="border-color: rgb(40, 29, 29); border: width 0.5em;" class="form-control" id="exampleFormControlTextarea1" name="Des" maxlength="500" rows="3"></textarea>
+                      </div>
+            </div>
+            <button class="btn btn-primary" href="/home" style="background-color: #395B64;" type="submit"
+                name="submit">Submit</button>
+        </form>
+    </center>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <%- include("partials/footer"); -%>

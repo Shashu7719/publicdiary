@@ -1,0 +1,66 @@
+<%- include("partials/header"); -%>
+
+ 
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+
+      
+      <% posts.forEach(function(post){ %>
+       
+          <% if(post.topic.length !=0 || post.info.length!=0) {%> 
+
+          <div class="col" class="row justify-content-center">
+            <div class="card" class="col-md-4">
+              <div class="card-body" id="summary">
+
+                <h4 class="card-title">
+                  <%= post.topic%>
+                </h4>
+
+
+                <p class="p1">
+                  <%=post.info.substring(0,99)%>
+                </p>
+                <p class="p2" class="hidden" id="<%= post.id%>">
+                  <%=post.info.substring(99,post.info.length)%>
+                </p>
+                <a style="float:right; color: rgb(4, 96, 96);" class="button" class="anc"
+                  onclick="$('#<%= post.id%>').toggle();">
+                  Read More...
+                </a><br>
+
+
+
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+
+<% } %> 
+          
+            <% }) %>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+  </body>
+
+  </html>
+
+  <!--   name="Des" -->
