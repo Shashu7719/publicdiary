@@ -14,9 +14,9 @@ app.use(express.json());
 // app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static("public"));
 
-const MONGO_DB=process.env.MONGO_DB;
-mongoose.connect(MONGO_DB);
-console.log(process.env.MONGO_DB);
+// const MONGO_DB=process.env.MONGO_DB;
+mongoose.connect("mongodb+srv://shashu:root77@connectbyapp.zubynz3.mongodb.net/diarydb");
+// console.log(process.env.MONGO_DB);
 
 
 
