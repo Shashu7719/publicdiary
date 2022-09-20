@@ -6,15 +6,16 @@ const mongoose = require("mongoose");
 
 
 const app=express();
-
+require('dotenv').config();
 app.set('view engine','ejs');
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static("public"));
 
-
+const MONGO_DB=process.env.MONGO_DB;
 mongoose.connect(MONGO_DB);
+console.log(process.env.MONGO_DB);
 
 
 
