@@ -32,7 +32,7 @@ const blogSchema= {
 
 
 const Blog =mongoose.model("Blog",blogSchema);
-module.exports =Blog;
+
 
 
 
@@ -67,7 +67,7 @@ app.get("/compose", function(req, res){
 			res.redirect("/");
 		}
 	  });
-	  console.log(req.body.Topic);
+	  
  });
 
 
