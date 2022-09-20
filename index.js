@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static("public"));
 
 
-mongoose.connect("mongodb+srv://shashu:root77@connectbyapp.zubynz3.mongodb.net/diarydb");
+mongoose.connect(MONGO_DB);
 
 
 
