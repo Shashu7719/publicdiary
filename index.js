@@ -1,11 +1,12 @@
 
 const express=require("express");
-const bodyParser= require("body-Parser");
+// const bodyParser= require("body-Parser");
 
 const mongoose = require("mongoose");
 
 
 const app=express();
+const bodyParser= require("body-Parser");
 require('dotenv').config();
 app.set('view engine','ejs');
 
