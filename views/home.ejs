@@ -6,7 +6,8 @@
       
       <% posts.forEach(function(post){ %>
        
-         
+         <% if(post.topic.length !=0 || post.info.length!=0) {%> 
+
 
           <div class="col" class="row justify-content-center">
             <div class="card" class="col-md-4">
@@ -37,7 +38,7 @@
           <br>
 
 
-
+<% } %> 
           
             <% }) %>
     </div>
