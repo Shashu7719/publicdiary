@@ -15,6 +15,14 @@ app.use(express.static("public"));
 
 // const MONGO_DB=process.env.MONGO_DB;
 mongoose.connect("mongodb+srv://shashu:"+ process.env.PASSWORD + "@connectbyapp.zubynz3.mongodb.net/diarydb");
+const connection = mongoose.connection;
+connection
+	.once('open',()=>{
+		console.log("mongo db is connected");
+	});
+	.on('error',(err)=>{
+		console.log(err);
+	});
 console.log(process.env.PASSWORD);
 
 
@@ -65,7 +73,7 @@ app.get("/compose", function(req, res){
 		,info:req.body.Des});
 	pblog.save(function(err){
 		if (!err){
-			res.redirect("/");
+			res.redirect("/home");
 		}
 	  });
 	  
