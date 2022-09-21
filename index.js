@@ -15,7 +15,7 @@ app.use(express.static("public"));
 
 // const MONGO_DB=process.env.MONGO_DB;
 mongoose.connect("mongodb+srv://shashu:${process.env.PASSWORD}@connectbyapp.zubynz3.mongodb.net/diarydb");
-// console.log(process.env.MONGO_DB);
+console.log(process.env.PASSWORD);
 
 
 
