@@ -72,7 +72,8 @@ app.get("/compose", function(req, res){
 	const pblog = new Blog({topic:req.body.Topic
 		,info:req.body.Des});
 	pblog.save(function(err){
-		if (!err){
+		if(err){console.log(err);}
+		else{
 			res.redirect("/");
 		}
 	  });
