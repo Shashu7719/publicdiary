@@ -19,10 +19,10 @@ const connection = mongoose.connection;
 connection
 	.once('open',()=>{
 		console.log("mongo db is connected");
-	});
+	})
 	.on('error',(err)=>{
 		console.log(err);
-	});
+	})
 console.log(process.env.PASSWORD);
 
 
