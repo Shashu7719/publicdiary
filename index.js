@@ -73,7 +73,7 @@ app.get("/compose", function(req, res){
 		,info:req.body.Des});
 	pblog.save(function(err){
 		if (!err){
-			res.redirect("/home");
+			res.redirect("/");
 		}
 	  });
 	  
