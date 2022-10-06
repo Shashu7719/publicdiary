@@ -3,7 +3,7 @@
  
     <div class="row row-cols-1 row-cols-md-2 g-4">
 
-      
+      <% posts.reverse() %>
       <% posts.forEach(function(post){ %>
        
          <% if(post.topic.length !=0 || post.info.length!=0) {%> 
